@@ -32,10 +32,23 @@ function onStartButtonClick() {
     if (milliseconds < 1000) {
       clearInterval(timerId);
     }
-    timer.textContent = `${day.padStart(2, '0')} : ${hour.padStart(
+    timer.querySelector('[data-days]').textContent = `${day.padStart(2, '0')}`;
+    timer.querySelector('[data-hours]').textContent = `${hour.padStart(
       2,
       '0'
-    )} : ${minute.padStart(2, '0')} : ${second.padStart(2, '0')}`;
+    )}`;
+    timer.querySelector('[data-minutes]').textContent = `${minute.padStart(
+      2,
+      '0'
+    )}`;
+    timer.querySelector('[data-seconds]').textContent = `${second.padStart(
+      2,
+      '0'
+    )}`;
+    //   timer.textContent = `${day.padStart(2, '0')} : ${hour.padStart(
+    //     2,
+    //     '0'
+    //   )} : ${minute.padStart(2, '0')} : ${second.padStart(2, '0')}`;
   }, 1000);
 }
 
